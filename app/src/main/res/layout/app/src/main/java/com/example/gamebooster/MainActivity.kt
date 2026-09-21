@@ -2,18 +2,10 @@ package com.example.gamebooster
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.gamebooster.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        binding.btnBoost.setOnClickListener {
-            GameBoosterManager.boostMemory(this)
-        }
+        setContentView(R.layout.activity_main)
     }
 }
